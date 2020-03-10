@@ -1,0 +1,38 @@
+{
+  "name": "fasttest",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000f\u0000a\u0000s\u0000t\u0000i\u0000f\u0000y\u0000T\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lassebramer/fastifyTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lassebramer/fastifyTest/issues"
+  },
+  "homepage": "https://github.com/lassebramer/fastifyTest#readme",
+  "dependencies": {
+    "@prisma/dmmf": "^0.1.26",
+    "@prisma/generator-helper": "0.0.43",
+    "@prisma/sdk": "0.0.226",
+    "ajax": "0.0.4",
+    "dagre": "^0.8.5",
+    "fastify": "^2.12.1",
+    "fastify-static": "^2.6.0",
+    "handlebars": "^4.7.3",
+    "lodash": "^4.17.15",
+    "point-of-view": "^3.7.2",
+    "tslib": "^1.11.1"
+  },
+  "devDependencies": {
+    "@types/dagre": "^0.7.42",
+    "@types/lodash": "^4.14.149",
+    "typescript": "^3.8.3"
+  }
+}

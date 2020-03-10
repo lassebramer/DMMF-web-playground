@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>TEST 123</title>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="/">
+        <img id="logo" src="../public/img/prisma.PNG" />
+      </a>
+    </div>
+    <div id="container">
+      <div id="top">
+        <div id="topleft">
+          <h1>Prisma 2 model generator</h1>
+          <div height="48"></div>
+          <div id="steps">
+            <div id="step">
+              <p></p>
+                <b>1: </b>Paste your schema.prisma datamodel in the
+                textfield.
+              </p>
+            </div>
+            <div id="step"><p><b>2: </b>Press Generate Model button.</p></div>
+            <div id="step">
+              <p><b>3: </b>A model of your database will be generated below!</p>
+            </div>
+          </div>
+          <div id="buttonDiv">
+          <a id="getTree" class="myButton">Generate Model</a>
+        </div>
+        </div>
+        <div id="textDiv">
+          <textarea
+            id="preParse"
+            class="autoExpand"
+            rows="3"
+            data-min-rows="3"
+            placeholder="Auto-Expanding Textarea"
+          >
+model Post {
+  content   String?
+  post_id   Int     @default(autoincrement()) @id
+  title     String
+  author_id User?
+  @@index([author_id], name: "author_id")
+}
+model Profile {
+  bio        String?
+  profile_id Int     @default(autoincrement()) @id
+  user_id    User
+  @@index([user_id], name: "user_id")
+}
+model User {
+  email   String    @unique
+  name    String?
+  user_id Int       @default(autoincrement()) @id
+  post    Post[]
+  profile Profile[]
+}
+        </textarea>
+        </div>
+      </div>
+
+      <br />
+      <div id="buttom"></div>
+      <div id="canvasContainer">
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+    </div>
+    <!-- <button id="getTree">Generate Model</button>
+    <textarea
+      id="preParse"
+      class="autoExpand"
+      rows="3"
+      data-min-rows="3"
+      placeholder="Auto-Expanding Textarea"
+    ></textarea> -->
+
+    <script>
+      var exports = {};
+    </script>
+    <script src="/public/index.js"></script>
+  </body>
+</html>
