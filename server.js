@@ -1,8 +1,7 @@
 //IMPORTS
 const fastify = require("fastify")();
 const path = require("path");
-const fs = require("fs");
-const getDMMF = require("@prisma/sdk/dist/engineCommands");
+
 
 //Route to endpoint that converts .prisma to DMMF
 fastify.register(require("./routes/getDMMF"), { prefix: "/getDMMF" });
@@ -20,7 +19,7 @@ fastify.register(require("point-of-view"), {
 });
 
 fastify.get("/", function(req, res) {
-  res.view("./templates/index.html");
+  res.view("/public/index.html");
 });
 
 // LISTINER
