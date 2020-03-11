@@ -202,11 +202,11 @@ export class World {
     console.log("dim", dims);
     if (dims.width && dims.height) {
       console.log("Setting");
-      this.canvas.height = dims.height + 300;
-      this.canvas.width = dims.width + 100;
-      // window.innerWidth > dims.width + 300
-      //   ? window.innerWidth
-      //   : dims.width + 300;
+      this.canvas.height = dims.height + 1000;
+      this.canvas.width =
+        window.innerWidth > dims.width + 300
+          ? window.innerWidth
+          : dims.width + 300;
     }
   }
   public draw = () => {
